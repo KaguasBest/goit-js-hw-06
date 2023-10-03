@@ -7,5 +7,8 @@ input.addEventListener('keydown', changeValue);
 
 function changeValue() {
   const result = input.value;
+  if (result === '') {
+    return (output.textContent = 'Anonymous');
+  }
   output.textContent = result;
 }
